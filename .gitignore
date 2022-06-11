@@ -4,6 +4,11 @@ bin-release/
 [Oo]bj/
 [Bb]in/
 
+db.sqlite3
+**/__pycache__
+**/migrations
+.env
+
 # Other files and folders
 .settings/
 
