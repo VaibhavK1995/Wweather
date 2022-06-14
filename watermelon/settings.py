@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-x(q7!33s4g-n=w1-y*ht2(!#qzxhkj8vz&-9v)k8t$n$xju(tu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['weather4s.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','*','weather4s.herokuapp.com']
 
 # Application definition
 
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -139,7 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 #STATIC_ROOT = "/home/watermelon/static"
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = "/home/dato/watermelon/static"
 
 # Default primary key field type
